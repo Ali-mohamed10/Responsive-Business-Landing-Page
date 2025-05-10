@@ -187,44 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    const daysTag = document.querySelector(".latest-events .details div:nth-of-type(1) p:nth-of-type(1)");
-    const hoursTag = document.querySelector(".latest-events .details div:nth-of-type(2) p:nth-of-type(1)");
-    const minutesTag = document.querySelector(".latest-events .details div:nth-of-type(3) p:nth-of-type(1)");
-    const secondsTag = document.querySelector(".latest-events .details div:nth-of-type(4) p:nth-of-type(1)");
-    const eventDetailsContainer = document.querySelector(".latest-events .masters .details");
-
-
-    const targetDate = new Date("Dec 31, 2030 23:59:59").getTime();
-
-    function updateTimer() {
-        if (!daysTag || !hoursTag || !minutesTag || !secondsTag || !eventDetailsContainer) {
-            return;
-        }
-
-        const now = new Date().getTime();
-        const timeLeft = targetDate - now;
-
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        daysTag.innerText = days < 10 ? `0${days}` : days;
-        hoursTag.innerText = hours < 10 ? `0${hours}` : hours;
-        minutesTag.innerText = minutes < 10 ? `0${minutes}` : minutes;
-        secondsTag.innerText = seconds < 10 ? `0${seconds}` : seconds;
-
-        if (timeLeft < 0) {
-            clearInterval(timerInterval);
-            eventDetailsContainer.innerHTML = "<div class='event-finished'>Happy New Year!</div>";
-        }
-    }
-
-    const timerInterval = setInterval(updateTimer, 1000);
-
-    updateTimer();
-
-
     const sectionsToAnimate = document.querySelectorAll(
         ".landing, .articles, .gallery, .features, .testimonials, .team-members, .services, .our-skills, .how-it-works, .latest-events, .pricing-plans, .top-videos, .our-awesome-stats, .discount"
     );
