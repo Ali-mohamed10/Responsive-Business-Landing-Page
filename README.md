@@ -5,7 +5,7 @@ This project is a simple and modern business landing page. It is built using HTM
 ## Demo
 
 You can see a live demo here:  
-https://ali-mohamed10.github.io/Responsive-Business-Landing-Page/
+https://responsive-business-landing-page.vercel.app/
 
 ## Features
 
