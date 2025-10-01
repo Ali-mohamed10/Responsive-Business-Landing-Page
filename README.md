@@ -2,6 +2,8 @@
 
 This project is a simple and modern business landing page. It is built using HTML, CSS, and JavaScript. The design is responsive, so it works well on computers, tablets, and phones.
 
+![Landing Page](imgs-temp-3/Screenshot-landing-page.png)
+
 ## Demo
 
 You can see a live demo here:  
